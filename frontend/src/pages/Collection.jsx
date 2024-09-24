@@ -36,19 +36,27 @@ const Collection = () => {
         category.includes(item.category)
       );
     }
+
+    if (subcategory.length > 0) {
+      productsCopy = productsCopy.filter((item) =>
+        subcategory.includes(item.subcategory)
+      );
+    }
+
+    setFilterProducts(productsCopy);
   };
 
-  useEffect(() => {
-    setFilterProducts(products);
-  }, []);
+  // useEffect(() => {
+  //   console.log(category);
+  // }, [category]);
+
+  // useEffect(() => {
+  //   console.log(subcategory);
+  // }, [subcategory]);
 
   useEffect(() => {
-    console.log(category);
-  }, [category]);
-
-  useEffect(() => {
-    console.log(subcategory);
-  }, [subcategory]);
+    applyFilter();
+  }, [category, subcategory]);
 
   return (
     <div className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t">

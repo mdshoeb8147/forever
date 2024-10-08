@@ -11,7 +11,7 @@ const ShopContextProvider = (props) => {
   const [showSearch, setShowSearch] = useState(false);
   const [cartItems, setCartItems] = useState({});
 
-  const addtoCart = async (itemId, size) => {
+  const addToCart = async (itemId, size) => {
     if (!size) {
       toast.error("select product size");
       return;
@@ -59,7 +59,7 @@ const ShopContextProvider = (props) => {
     showSearch,
     setShowSearch,
     cartItems,
-    addtoCart,
+    addToCart,
     getCartCount,
   };
   return (

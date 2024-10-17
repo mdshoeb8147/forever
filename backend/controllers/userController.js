@@ -10,3 +10,4 @@ const registerUser = async (req, res) => {
 const adminLogin = async (req, res) => {};
 
 export { loginUser, registerUser, adminLogin };
+// endpoints to be done 55543

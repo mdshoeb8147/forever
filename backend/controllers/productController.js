@@ -65,7 +65,9 @@ const addProduct = async (req, res) => {
 };
 
 // function fro list product
-const listProduct = async (req, res) => {};
+const listProduct = async (req, res) => {
+  // 65808
+};
 
 // function fro remove product
 const removeProduct = async (req, res) => {};

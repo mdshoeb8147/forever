@@ -66,7 +66,13 @@ const addProduct = async (req, res) => {
 
 // function fro list product
 const listProduct = async (req, res) => {
-  // 65808
+  try {
+    const products = await productModel.find({});
+    res.json({ success: true, products });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: error.message });
+  }
 };
 
 // function fro remove product
